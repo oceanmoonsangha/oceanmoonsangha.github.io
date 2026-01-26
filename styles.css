@@ -53,7 +53,7 @@
     
     /* Typography */
     --font-display: 'Gentium Plus', Georgia, serif;
-    --font-body: 'Zen Kaku Gothic New', sans-serif;
+    --font-body: 'Gentium Plus', Georgia, serif;
     
     /* Spacing */
     --space-xs: 0.5rem;
