@@ -4,15 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Navigation scroll effect
     const nav = document.querySelector('.nav');
-    
+    let ticking = false;
+
     function handleScroll() {
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
     }
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check initial state
     

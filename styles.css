@@ -142,7 +142,8 @@ em {
     z-index: 1000;
     padding: var(--space-sm) 0;
     background: transparent;
-    transition: var(--transition-smooth);
+    transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav.scrolled {
@@ -671,6 +672,12 @@ em {
     
     .intro-visual {
         order: -1;
+        overflow: hidden;
+    }
+
+    .intro-visual img {
+        width: 100%;
+        max-width: none;
     }
     
     .enso {
